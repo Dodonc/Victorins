@@ -1,0 +1,25 @@
+﻿<Window x:Class="Victorins.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Victorins"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="233" Margin="24,130,0,0" VerticalAlignment="Top" Width="154" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="listBox_SelectionChanged"/>
+        <Button x:Name="Save" Content="Сохранение" HorizontalAlignment="Left" Height="43" Margin="655,309,0,0" VerticalAlignment="Top" Width="132" Click="Save_Click"/>
+        <Button x:Name="Load" Content="Загрузка" HorizontalAlignment="Left" Height="43" Margin="655,361,0,0" VerticalAlignment="Top" Width="132" Click="Load_Click"/>
+        <Button x:Name="AddQuest" Content="Добавить вопрос" HorizontalAlignment="Left" Height="43" Margin="617,165,0,0" VerticalAlignment="Top" Width="132" Click="AddQuest_Click"/>
+        <ListBox x:Name="Quests" HorizontalAlignment="Left" Height="111" Margin="617,27,0,0" VerticalAlignment="Top" Width="154" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="Quests_SelectionChanged"/>
+        <TextBox x:Name="tb" HorizontalAlignment="Left" Height="38" Margin="27,382,0,0" TextWrapping="Wrap" Text="NameVictorin" VerticalAlignment="Top" Width="151"/>
+        <TextBox x:Name="questAsk" HorizontalAlignment="Left" Height="42" Margin="305,40,0,0" TextWrapping="Wrap" Text="Ask" VerticalAlignment="Top" Width="298"/>
+        <TextBox x:Name="questName" HorizontalAlignment="Left" Height="42" Margin="305,96,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="298"/>
+        <TextBox x:Name="questAnswer" HorizontalAlignment="Left" Height="42" Margin="305,165,0,0" TextWrapping="Wrap" Text="Answer" VerticalAlignment="Top" Width="149"/>
+        <RadioButton x:Name="isAns" Content="True or false" HorizontalAlignment="Left" Height="42" Margin="459,165,0,0" VerticalAlignment="Top" Width="135" IsChecked="False"/>
+        <ListBox x:Name="QuestIndexs" HorizontalAlignment="Left" Height="57" Margin="305,220,0,0" VerticalAlignment="Top" Width="298" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <Label x:Name="Scope" Content="Scope" HorizontalAlignment="Left" Height="47" Margin="24,40,0,0" VerticalAlignment="Top" Width="208" FontSize="20"/>
+        <Button x:Name="Play" Content="Начать викторину" HorizontalAlignment="Left" Height="64" Margin="245,318,0,0" VerticalAlignment="Top" Width="323" FontSize="24" Click="Play_Click"/>
+
+    </Grid>
+</Window>
